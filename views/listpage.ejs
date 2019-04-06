@@ -1,23 +1,33 @@
 <!DOCTYPE html>
 <html>
 <head> <% include ./head %> </head>
-<body>
+<body class="pink">
 <% include ./header %>
 
-    <a class="btn" href="/additem">Add New Item</a>
+    <a class="btn purple" href="/additem">Add New Item</a>
 
     <div class="card">
 
-    <table class="highlight">
+    <table class="blue purple-text">
         <tr>
-            <th>Song</th><th>Singer</th><th>Added By</th><th>Likes</th><th>Actions</th>
+            <th>Movie Title</th><th>Director</th><th>Description</th><th>Main Character</th><th>Added By</th><th>Likes</th><th>Actions</th>
         </tr>
 
         <% items.forEach(function(item){  %>
 
 
+      <tr>
+          <td><%=item.title%></td>
+          <td><%=item.director%></td>
+          <td><%=item.description%></td>
+          <td><%=item.character%></td>
+         <td><%=item.addedBy%></td>
+          <td><%=item.likes%></td>
+          <td><a class="red-text" href="/like?title=<%= item.title%>"><i class="material-icons">favorite</i></a></td>
+         <td><a class="pink-text" href="/delete?title=<%= item.title%>"><i class="material-icons">delete</i></a></td> 
 
-
+          
+</tr>
 
         <% }) %>
     </table>

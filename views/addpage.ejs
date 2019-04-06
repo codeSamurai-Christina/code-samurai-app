@@ -4,10 +4,16 @@
 <body>
 <% include ./header %>
 
-<div class="card">
+<div class="card yellow">
 
     <form method="post" action="saveitem">
-
+        Movie Title*: <input type="text" name="title" required/>
+Director: <input type="text" name="director"/>
+        Main character: <input type="text" name="character"/>
+        Released date: <input type="date" name="released_Date"/>
+        trailer link: <input type="url" name="trailerLink"/>
+        email: <input type="email" name="email"/>
+        discription: <input type="text" name="discription"/>
 
 
 
